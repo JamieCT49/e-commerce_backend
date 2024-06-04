@@ -17,10 +17,10 @@ Product.init(
     },
     product_name: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
     },
     price: {
-      type: DataTypes.DECIMAL(10, 2),
+      type: DataTypes.DECIMAL(10,2),
       allowNull: false,
       validate: {
         isDecimal: true
@@ -31,16 +31,16 @@ Product.init(
       allowNull: false,
       defaultValue: 10,
       validate: {
-        inNumeric: true
+        isNumeric: true
       }
     },
-    catagory_id: {
+    category_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'catagory',
-        key: 'id',
-      },
-    },
+        model: 'category',
+        key: 'id'
+      }
+    }
     // define columns
   },
   {
